@@ -23,6 +23,7 @@ Feature: Inventory Management
         Given the inventory contains products:
             | Product | Quantity |
             | Coffee | 10 |
+            |  Sugar | 20 |
         When the user updates product "Coffee" to quantity "25"
         Then the inventory should show product "Coffee" with quantity "25"
 
