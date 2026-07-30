@@ -1,10 +1,11 @@
-Feature: Add a product to the inventory
+Feature: Inventory Management
+
     Scenario: Add a product to the inventory
         Given the inventory is empty
         When the user adds a product "Coffee"
         Then the inventory should contain "Coffee"
 
-Feature: List all products in the inventory
+
     Scenario: List all products in the inventory
         Given the inventory contains products:
             | Product |
@@ -18,7 +19,6 @@ Feature: List all products in the inventory
         - Sugar
         """
 
-Feature: Update the quantity of a product
     Scenario: Update the quantity of a product
         Given the inventory contains products:
             | Product | Quantity |
@@ -26,7 +26,6 @@ Feature: Update the quantity of a product
         When the user updates product "Coffee" to quantity "25"
         Then the inventory should show product "Coffee" with quantity "25"
 
-Feature: Remove a product from the inventory
   Scenario: Remove a product from the inventory
     Given the inventory contains products:
       | Product |
@@ -35,7 +34,6 @@ Feature: Remove a product from the inventory
     When the user removes the product "Coffee"
     Then the inventory should not contain "Coffee"
 
-Feature: Handle failed interactions gracefully
   Scenario: Remove a product that does not exist
     Given the inventory is empty
     When the user removes the product "Coffee"
