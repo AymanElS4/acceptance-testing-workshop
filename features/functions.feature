@@ -34,3 +34,9 @@ Feature: Remove a product from the inventory
       | Sugar   |
     When the user removes the product "Coffee"
     Then the inventory should not contain "Coffee"
+
+Feature: Handle failed interactions gracefully
+  Scenario: Remove a product that does not exist
+    Given the inventory is empty
+    When the user removes the product "Coffee"
+    Then the output should be "Product Coffee was not found"
