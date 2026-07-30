@@ -1,7 +1,7 @@
 from behave import given, when, then
 
 #Add a product and remove a product that does not exist
-""" Parte de Christian
+
 @given('the inventory is empty')
 def step_impl(context):
     context.inventory = []
@@ -13,7 +13,7 @@ def step_impl(context, product):
 @then('the inventory should contain "{product}"')
 def step_impl(context, product):
     assert product in context.inventory, f'Product "{product}" not found in the inventory'
-"""
+
 
 #List, remove, and update
 
