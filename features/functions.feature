@@ -12,9 +12,11 @@ Feature: List all products in the inventory
             | Sugar |
         When the user lists all products
         Then the output should contain:
-    Products:
-    - Coffee
-    - Sugar
+    """
+      Products:
+      - Coffee
+      - Sugar
+      """
 
 Feature: Update the quantity of a product
     Scenario: Update the quantity of a product
